@@ -1,0 +1,141 @@
+#block-header{
+    width: auto;
+    height: 220px;
+    background-color: pink;
+}
+#block-add-tender{
+    background-color: whitesmoke;
+    float: ;
+}
+#block-footer{
+    width: auto;
+    height: 220px;
+    background-color: wheat;
+}
+.h2-title{
+    font: 25px sans-serif;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 3px;
+}
+#form-add > li{
+    list-style-type: none;
+}
+#form-add > li > input{
+    list-style-type: none;
+    height: 30px;
+    width: 270px;
+    font: 17px sans-serif;
+    margin-left: 200px;
+    margin-top: 10px;
+    padding-left: 5px;
+    color: black;
+    border-left: 1px solid #ABABAB;
+    border-top: 1px solid #ABABAB;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+#form-add > li > input#add_date_from,
+#form-add > li > input#add_date_till,
+#form-add > li > input#add_your_money{
+    height: 30px;
+    width: 100px;
+    font: 17px sans-serif;
+    margin-left: 200px;
+    padding-left: 5px;
+    color: black;
+    border-left: 1px solid #ABABAB;
+    border-top: 1px solid #ABABAB;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+#form-add > li > label{
+    list-style-type: none;
+    position: absolute;
+    font: 15px sans-serif;
+    margin-top: 7px;
+}
+.colon{
+    font: 16px sans-serif;
+    position: absolute;
+    margin-left: 188px;
+    margin-top: 10px;
+}
+.star{
+    font: 16px sans-serif;
+    position: absolute;
+    margin-left: 120px;
+}
+
+ul.transport_list{
+    display:none;
+}
+li.transport:hover ul.transport_list{
+    display:block;
+}
+ul.food_list{
+    display:none;
+}
+li.food:hover ul.food_list{
+    display:block;
+}
+.transport, .food{
+    margin-left: 200px;
+}
+#check{
+    padding-top: 25px;    
+}
+#header-list-my-tenders{
+    margin-left: 150px;
+    height: 30px;
+    border-bottom: 1px solid #DBDBDB;
+}
+#header-list-my-tenders > div{
+    float: left;
+    margin-left: 5px;
+    text-align: center;
+    font: bold 13px sans-serif;
+    color: #6D6D6D;
+    margin-top: 7px;
+}
+#head1{width: 75px;}
+#head2{width: 300px;}
+#head3{width: 75px;}
+#head4{width: 220px;}
+#head5{width: 180px;}
+#head6{width: 75px;}
+
+.block-list-my-tenders{
+    margin-left: 150px;
+    height: 300px;
+}
+.block-list-my-tenders > div{
+    float: left;
+    margin-left: 5px;
+    border: 1px solid black;
+    
+}
+.date-tender{
+    width: 75px;
+    height: 200px;
+}
+.title-tender{
+    width: 300px;
+    height: 200px;
+}
+.price-tender{
+    width: 75px;
+    height: 200px;
+}
+.mark-tender{
+    width: 220px;
+    height: 200px;
+}
+.status-tender{
+    width: 180px;
+    height: 200px;
+}
+.id-tender{
+    width: 75px;
+    height: 200px;
+}
+
