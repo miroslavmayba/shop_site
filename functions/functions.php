@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 
 function clear_string($cl_str){
     $cl_str = strip_tags($cl_str);
@@ -22,11 +22,11 @@ function fungenpass(){
 
                  '7','8','9','0');
 
-    // Ãåíåðèðóåì ïàðîëü
+    // Ð“ÐµÐ½ÐµÑ€Ð¸Ñ€ÑƒÐµÐ¼ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ
     $pass = "";
 
     for($i = 0; $i < $number; $i++){
-        // Âû÷èñëÿåì ñëó÷àéíûé èíäåêñ ìàññèâà
+        // Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÑÐµÐ¼ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ñ‹Ð¹ Ð¸Ð½Ð´ÐµÐºÑ Ð¼Ð°ÑÑÐ¸Ð²Ð°
         $index = rand(0, count($arr) - 1);
         $pass .= $arr[$index];
     }

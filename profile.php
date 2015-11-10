@@ -1,4 +1,4 @@
-<?php
+п»ї<?php
     
 session_start();
     
@@ -23,11 +23,11 @@ if ($_SESSION['auth'] == 'yes_auth'){
         $pass   = "9nm2rv8q".$pass."2yo6z";
         
     	if($_SESSION['auth_pass'] != $pass){
-            $error[]='Неверный текущий пароль!';
+            $error[]='РќРµРІРµСЂРЅС‹Р№ С‚РµРєСѓС‰РёР№ РїР°СЂРѕР»СЊ!';
             } else {
                 if($_POST["info_new_pass"] != ""){
                     if(strlen($_POST["info_new_pass"]) < 7 || strlen($_POST["info_new_pass"]) > 15){
-                        $error[]='Укажите новый пароль от 7 до 15 символов!';
+                        $error[]='РЈРєР°Р¶РёС‚Рµ РЅРѕРІС‹Р№ РїР°СЂРѕР»СЊ РѕС‚ 7 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!';
                     } else {
                         $newpass   = md5(clear_string($_POST["info_new_pass"]));
                         $newpass   = strrev($newpass);
@@ -36,29 +36,29 @@ if ($_SESSION['auth'] == 'yes_auth'){
                     }
                 }
                 if(strlen($_POST["info_surname"]) < 3 || strlen($_POST["info_surname"]) > 15){
-                    $error[]='Укажите Фамилию от 3 до 15 символов!';
+                    $error[]='РЈРєР°Р¶РёС‚Рµ Р¤Р°РјРёР»РёСЋ РѕС‚ 3 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!';
                 }
                 if(strlen($_POST["info_name"]) < 3 || strlen($_POST["info_name"]) > 15){
-                    $error[]='Укажите Имя от 3 до 15 символов!';
+                    $error[]='РЈРєР°Р¶РёС‚Рµ РРјСЏ РѕС‚ 3 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!';
                 }
                 if(strlen($_POST["info_patronymic"]) < 3 || strlen($_POST["info_patronymic"]) > 25){
-                    $error[]='Укажите Отчество от 3 до 25 символов!';
+                    $error[]='РЈРєР°Р¶РёС‚Рµ РћС‚С‡РµСЃС‚РІРѕ РѕС‚ 3 РґРѕ 25 СЃРёРјРІРѕР»РѕРІ!';
                 }  
                 if(!preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i",trim($_POST["info_email"]))){
-                    $error[]='Укажите корректный email!';
+                    $error[]='РЈРєР°Р¶РёС‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ email!';
                 }
                 if(strlen($_POST["info_phone"]) == ""){
-                    $error[]='Укажите номер телефона!';
+                    $error[]='РЈРєР°Р¶РёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°!';
                 } 
                 if(strlen($_POST["info_address"]) == ""){
-                    $error[]='Укажите адрес доставки!';
+                    $error[]='РЈРєР°Р¶РёС‚Рµ Р°РґСЂРµСЃ РґРѕСЃС‚Р°РІРєРё!';
                 }
             }
             
         if(count($error)){
             $_SESSION['msg'] = "<p align='left' id='form-error'>".implode('<br />',$error)."</p>";
        	} else {
-       	    $_SESSION['msg'] = "<p align='left' id='form-success'>Данные успешно сохранены!</p>";
+       	    $_SESSION['msg'] = "<p align='left' id='form-success'>Р”Р°РЅРЅС‹Рµ СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅС‹!</p>";
                    
             $dataquery = $newpassquery."surname='".$_POST["info_surname"]."',name='".$_POST["info_name"]."',patronymic='".$_POST["info_patronymic"]."',email='".$_POST["info_email"]."',phone='".$_POST["info_phone"]."',address='".$_POST["info_address"]."'";      
             $update = mysql_query("UPDATE reg_user SET $dataquery WHERE login = '{$_SESSION['auth_login']}'",$link);
@@ -95,7 +95,7 @@ if ($_SESSION['auth'] == 'yes_auth'){
     <script type="text/javascript" src="/trackbar/jquery.trackbar.js"></script>
     <script type="text/javascript" src="/js/TextChange.js"></script>
     
-	<title>Интернет магазин 666</title>
+	<title>РРЅС‚РµСЂРЅРµС‚ РјР°РіР°Р·РёРЅ</title>
 </head>
 
 <body>
@@ -114,7 +114,7 @@ if ($_SESSION['auth'] == 'yes_auth'){
         </div>
         
         <div id="block-content">
-            <h3 class="title-h3" >Изменение профиля</h3>
+            <h3 class="title-h3" >РР·РјРµРЅРµРЅРёРµ РїСЂРѕС„РёР»СЏ</h3>
             
             <?php
                 if($_SESSION['msg']){
@@ -126,31 +126,31 @@ if ($_SESSION['auth'] == 'yes_auth'){
             <form method="post">
                 <ul id="info-profile">
                     <li>
-                        <label for="info_pass">Текущий пароль</label>
+                        <label for="info_pass">РўРµРєСѓС‰РёР№ РїР°СЂРѕР»СЊ</label>
                         <span class="star">*</span>
                         <input type="text" name="info_pass" id="info_pass" value="" />
                     </li>
 
                     <li>
-                        <label for="info_new_pass">Новый пароль</label>
+                        <label for="info_new_pass">РќРѕРІС‹Р№ РїР°СЂРѕР»СЊ</label>
                         <span class="star">*</span>
                         <input type="text" name="info_new_pass" id="info_new_pass" value="" />
                     </li>
                     
                     <li>
-                        <label for="info_surname">Фамилия</label>
+                        <label for="info_surname">Р¤Р°РјРёР»РёСЏ</label>
                         <span class="star">*</span>
                         <input type="text" name="info_surname" id="info_surname" value="<?php echo $_SESSION['auth_surname']; ?>"  />
                     </li>
                     
                     <li>
-                        <label for="info_name">Имя</label>
+                        <label for="info_name">РРјСЏ</label>
                         <span class="star">*</span>
                         <input type="text" name="info_name" id="info_name" value="<?php echo $_SESSION['auth_name']; ?>"  />
                     </li>
                     
                     <li>
-                        <label for="info_patronymic">Отчество</label>
+                        <label for="info_patronymic">РћС‚С‡РµСЃС‚РІРѕ</label>
                         <span class="star">*</span>
                         <input type="text" name="info_patronymic" id="info_patronymic" value="<?php echo $_SESSION['auth_patronymic']; ?>" />
                     </li>
@@ -163,18 +163,18 @@ if ($_SESSION['auth'] == 'yes_auth'){
                     </li>
                     
                     <li>
-                        <label for="info_phone">Телефон</label>
+                        <label for="info_phone">РўРµР»РµС„РѕРЅ</label>
                         <span class="star">*</span>
                         <input type="text" name="info_phone" id="info_phone" value="<?php echo $_SESSION['auth_phone']; ?>" />
                     </li>
                     
                     <li>
-                        <label for="info_address">Адрес доставки</label>
+                        <label for="info_address">РђРґСЂРµСЃ РґРѕСЃС‚Р°РІРєРё</label>
                         <span class="star">*</span>
                         <textarea name="info_address"  > <?php echo $_SESSION['auth_address']; ?> </textarea>
                     </li>
                 </ul>
-                <p align="right"><input type="submit" id="form_submit" name="save_submit" value="Сохранить" /></p>
+                <p align="right"><input type="submit" id="form_submit" name="save_submit" value="РЎРѕС…СЂР°РЅРёС‚СЊ" /></p>
             </form>
         </div>
         <?php

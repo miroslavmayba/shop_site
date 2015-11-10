@@ -1,4 +1,4 @@
-<?php
+п»ї<?php
     include("include/db_connect.php");
     include("functions/functions.php");
     session_start();
@@ -9,17 +9,17 @@
     switch ($go) {
         case "news":     
 	    $query_aystopper= " WHERE visible = '1' AND new = '1'";
-        $name_aystopper = "Новинки товаров";
+        $name_aystopper = "РќРѕРІРёРЅРєРё С‚РѕРІР°СЂРѕРІ";
 	    break;
 
 	    case "leaders":
 	    $query_aystopper= " WHERE visible = '1' AND leader = '1'";
-        $name_aystopper = "Лидеры продаж";
+        $name_aystopper = "Р›РёРґРµСЂС‹ РїСЂРѕРґР°Р¶";
 	    break;
 
 	    case "sale":
 	    $query_aystopper= " WHERE visible = '1' AND sale = '1'";
-        $name_aystopper = "Распродажа товаров";
+        $name_aystopper = "Р Р°СЃРїСЂРѕРґР°Р¶Р° С‚РѕРІР°СЂРѕРІ";
 	    break;
         
         
@@ -34,32 +34,32 @@
     switch ($sorting){
         case 'price-asc';
         $sorting = 'price ASC';
-        $sort_name = 'От дешевых к дорогим';
+        $sort_name = 'РћС‚ РґРµС€РµРІС‹С… Рє РґРѕСЂРѕРіРёРј';
         break;
         
         case 'price-desc';
         $sorting = 'price DESC';
-        $sort_name = 'От дорогих к дешевым';
+        $sort_name = 'РћС‚ РґРѕСЂРѕРіРёС… Рє РґРµС€РµРІС‹Рј';
         break;
                 
         case 'popular';
         $sorting = 'count DESC';
-        $sort_name = 'Популярные';
+        $sort_name = 'РџРѕРїСѓР»СЏСЂРЅС‹Рµ';
         break;
         
         case 'news';
         $sorting = 'datetime DESC';
-        $sort_name = 'Новинки';
+        $sort_name = 'РќРѕРІРёРЅРєРё';
         break;
         
         case 'brand';
         $sorting = 'brand';
-        $sort_name = 'По алфавиту';
+        $sort_name = 'РџРѕ Р°Р»С„Р°РІРёС‚Сѓ';
         break;
         
         default:
         $sorting = 'products_id DESC';
-        $sort_name = 'Нет сортировки';
+        $sort_name = 'РќРµС‚ СЃРѕСЂС‚РёСЂРѕРІРєРё';
         break;
     }
 ?>
@@ -79,7 +79,7 @@
     <script type="text/javascript" src="/trackbar/jquery.trackbar.js"></script>
     <script type="text/javascript" src="/js/TextChange.js"></script>
     
-	<title>Интернет магазин 666</title>
+	<title>РРЅС‚РµСЂРЅРµС‚ РјР°РіР°Р·РёРЅ 666</title>
 </head>
 
 <body>
@@ -101,19 +101,19 @@
         if ($query_aystopper != ""){
         ?>
             <div id="block-sorting">
-            <p id="nav-breadcrumbs"><a href="index.php">Главная страница</a> \ <span><?php echo $name_aystopper ?></span></p>
+            <p id="nav-breadcrumbs"><a href="index.php">Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°</a> \ <span><?php echo $name_aystopper ?></span></p>
                 <ul id="option-list">
-                    <li>Вид:</li>
+                    <li>Р’РёРґ:</li>
                     <li><img id="style-grid" src="/images/icon-grid.png"/></li>
                     <li><img id="style-list" src="/images/icon-list.png"/></li>
-                    <li>Сортировать:</li>
+                    <li>РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ:</li>
                     <li><a id="select-sort"><?php echo $sort_name;?></a>
                         <ul id="sorting-list">
-                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=price-asc">От дешевых к дорогим</a></li>
-                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=price-desc">От дорогих к дешевым</a></li>
-                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=popular">Популярные</a></li>
-                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=news">Новинки</a></li>
-                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=brand">По алфавиту</a></li>
+                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=price-asc">РћС‚ РґРµС€РµРІС‹С… Рє РґРѕСЂРѕРіРёРј</a></li>
+                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=price-desc">РћС‚ РґРѕСЂРѕРіРёС… Рє РґРµС€РµРІС‹Рј</a></li>
+                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=popular">РџРѕРїСѓР»СЏСЂРЅС‹Рµ</a></li>
+                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=news">РќРѕРІРёРЅРєРё</a></li>
+                            <li><a href="view_aystopper.php?go=<?php echo $go?>&sort=brand">РџРѕ Р°Р»С„Р°РІРёС‚Сѓ</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -177,7 +177,7 @@
                                     <li><img src="/images/comment-icon.png" /><p>0</p></li>
                                 </ul>
                                 <a class="add-cart-style-grid"><a/>
-                                <p class="style-price-grid"><strong>'.group_numerals($row["price"]).'</strong> грн. </p>
+                                <p class="style-price-grid"><strong>'.group_numerals($row["price"]).'</strong> РіСЂРЅ. </p>
                                 <div class="mini-features" >
                                     '.$row["mini_features"].'
                                 </div>
@@ -226,7 +226,7 @@
                                 
                                 <p class="style-title-list"><a href="">'.$row["title"].'</a></p>
                                 <a class="add-cart-style-list"><a/>
-                                <p class="style-price-list"><strong>'.group_numerals($row["price"]).'</strong> грн. </p>
+                                <p class="style-price-list"><strong>'.group_numerals($row["price"]).'</strong> РіСЂРЅ. </p>
                                 <div class="style-text-list" >
                                     '.$row["mini_description"].'
                                 </div>
@@ -240,7 +240,7 @@
            
         
         } else {
-            echo '<p>Даная категория не найдена!</p>';
+            echo '<p>Р”Р°РЅР°СЏ РєР°С‚РµРіРѕСЂРёСЏ РЅРµ РЅР°Р№РґРµРЅР°!</p>';
         }
                                 
                 if ($page != 1){ $pstr_prev = '<li><a class="pstr-prev" href="view_aystopper.php?go='.$go.'&page='.($page - 1).'">&lt;</a></li>';}

@@ -1,4 +1,4 @@
-<?php
+п»ї<?php
     session_start();
     
     include("../include/db_connect.php");
@@ -19,23 +19,23 @@
  
  
     if (strlen($login) < 5 or strlen($login) > 15){
-        $error[] = "Логин должен быть от 5 до 15 символов!"; 
+        $error[] = "Р›РѕРіРёРЅ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РѕС‚ 5 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!"; 
     } else {
         $result = mysql_query("SELECT login FROM reg_user WHERE login = '$login'",$link);
         If (mysql_num_rows($result) > 0){
-            $error[] = "Логин занят!";
+            $error[] = "Р›РѕРіРёРЅ Р·Р°РЅСЏС‚!";
         }
     }
      
-    if (strlen($pass) < 7 or strlen($pass) > 15) $error[] = "Укажите пароль от 7 до 15 символов!";
-    if (strlen($surname) < 3 or strlen($surname) > 20) $error[] = "Укажите Фамилию от 3 до 20 символов!";
-    if (strlen($name) < 3 or strlen($name) > 15) $error[] = "Укажите Имя от 3 до 15 символов!";
-    if (strlen($patronymic) < 3 or strlen($patronymic) > 25) $error[] = "Укажите Отчество от 3 до 25 символов!";
-    if (!preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i",trim($email))) $error[] = "Укажите корректный email!";
-    if (!$phone) $error[] = "Укажите номер телефона!";
-    if (!$address) $error[] = "Необходимо указать адрес доставки!";
+    if (strlen($pass) < 7 or strlen($pass) > 15) $error[] = "РЈРєР°Р¶РёС‚Рµ РїР°СЂРѕР»СЊ РѕС‚ 7 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!";
+    if (strlen($surname) < 3 or strlen($surname) > 20) $error[] = "РЈРєР°Р¶РёС‚Рµ Р¤Р°РјРёР»РёСЋ РѕС‚ 3 РґРѕ 20 СЃРёРјРІРѕР»РѕРІ!";
+    if (strlen($name) < 3 or strlen($name) > 15) $error[] = "РЈРєР°Р¶РёС‚Рµ РРјСЏ РѕС‚ 3 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!";
+    if (strlen($patronymic) < 3 or strlen($patronymic) > 25) $error[] = "РЈРєР°Р¶РёС‚Рµ РћС‚С‡РµСЃС‚РІРѕ РѕС‚ 3 РґРѕ 25 СЃРёРјРІРѕР»РѕРІ!";
+    if (!preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i",trim($email))) $error[] = "РЈРєР°Р¶РёС‚Рµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ email!";
+    if (!$phone) $error[] = "РЈРєР°Р¶РёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°!";
+    if (!$address) $error[] = "РќРµРѕР±С…РѕРґРёРјРѕ СѓРєР°Р·Р°С‚СЊ Р°РґСЂРµСЃ РґРѕСЃС‚Р°РІРєРё!";
     
-    if($_SESSION['img_captcha'] != strtolower($_POST['reg_captcha'])) $error[] = "Неверный код с картинки!";
+    if($_SESSION['img_captcha'] != strtolower($_POST['reg_captcha'])) $error[] = "РќРµРІРµСЂРЅС‹Р№ РєРѕРґ СЃ РєР°СЂС‚РёРЅРєРё!";
     unset($_SESSION['img_captcha']);
     
     if (count($error)){

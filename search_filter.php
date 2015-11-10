@@ -1,4 +1,4 @@
-<?php
+п»ї<?php
     include("include/db_connect.php");
     include("functions/functions.php");
     session_start();
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="/trackbar/jquery.trackbar.js"></script>
     <script type="text/javascript" src="/js/TextChange.js"></script>
     
-	<title>Поиск по параметрам</title>
+	<title>РџРѕРёСЃРє РїРѕ РїР°СЂР°РјРµС‚СЂР°Рј</title>
 </head>
 
 <body>
@@ -63,19 +63,19 @@
                     
                     echo '
                     <div id="block-sorting">
-                    <p id="nav-breadcrumbs"><a href="index.php">Главная страница</a> \ <span>Все товары</span></p>
+                    <p id="nav-breadcrumbs"><a href="index.php">Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°</a> \ <span>Р’СЃРµ С‚РѕРІР°СЂС‹</span></p>
                         <ul id="option-list">
-                            <li>Вид:</li>
+                            <li>Р’РёРґ:</li>
                             <li><img id="style-grid" src="/images/icon-grid.png"/></li>
                             <li><img id="style-list" src="/images/icon-list.png"/></li>
-                            <li>Сортировать:</li>
+                            <li>РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ:</li>
                             <li><a id="select-sort">'.$sort_name.'</a>
                                 <ul id="sorting-list">
-                                    <li><a href="view_cat.php?'.$catlink.'type='.$type.'&sort=price-asc">От дешевых к дорогим</a></li>
-                                    <li><a href="view_cat.php?'.$catlink.'&type='.$type.'&sort=price-desc">От дорогих к дешевым</a></li>
-                                    <li><a href="view_cat.php?'.$catlink.'&type='.$type.'&sort=popular">Популярные</a></li>
-                                    <li><a href="view_cat.php?'.$catlink.'&type='.$type.'&sort=news">Новинки</a></li>
-                                    <li><a href="view_cat.php?'.$catlink.'&type='.$type.'&sort=brand">По алфавиту</a></li>
+                                    <li><a href="view_cat.php?'.$catlink.'type='.$type.'&sort=price-asc">РћС‚ РґРµС€РµРІС‹С… Рє РґРѕСЂРѕРіРёРј</a></li>
+                                    <li><a href="view_cat.php?'.$catlink.'&type='.$type.'&sort=price-desc">РћС‚ РґРѕСЂРѕРіРёС… Рє РґРµС€РµРІС‹Рј</a></li>
+                                    <li><a href="view_cat.php?'.$catlink.'&type='.$type.'&sort=popular">РџРѕРїСѓР»СЏСЂРЅС‹Рµ</a></li>
+                                    <li><a href="view_cat.php?'.$catlink.'&type='.$type.'&sort=news">РќРѕРІРёРЅРєРё</a></li>
+                                    <li><a href="view_cat.php?'.$catlink.'&type='.$type.'&sort=brand">РџРѕ Р°Р»С„Р°РІРёС‚Сѓ</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -112,7 +112,7 @@
                                     <li><img src="/images/comment-icon.png" /><p>0</p></li>
                                 </ul>
                                 <a class="add-cart-style-grid"><a/>
-                                <p class="style-price-grid"><strong>'.group_numerals($row["price"]).'</strong> грн. </p>
+                                <p class="style-price-grid"><strong>'.group_numerals($row["price"]).'</strong> РіСЂРЅ. </p>
                                 <div class="mini-features" >
                                     '.$row["mini_features"].'
                                 </div>
@@ -160,7 +160,7 @@
                                 
                                 <p class="style-title-list"><a href="">'.$row["title"].'</a></p>
                                 <a class="add-cart-style-list"><a/>
-                                <p class="style-price-list"><strong>'.group_numerals($row["price"]).'</strong> грн. </p>
+                                <p class="style-price-list"><strong>'.group_numerals($row["price"]).'</strong> РіСЂРЅ. </p>
                                 <div class="style-text-list" >
                                     '.$row["mini_description"].'
                                 </div>
@@ -170,7 +170,7 @@
                     while ($row = mysql_fetch_array($result));
                 }
             } else {
-                echo '<h3>Категория недоступна или не создана</h3>';
+                echo '<h3>РљР°С‚РµРіРѕСЂРёСЏ РЅРµРґРѕСЃС‚СѓРїРЅР° РёР»Рё РЅРµ СЃРѕР·РґР°РЅР°</h3>';
             }             
             ?>
             </ul>

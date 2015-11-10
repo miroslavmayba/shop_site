@@ -1,16 +1,16 @@
-<?php
+ï»¿<?php
 	
     if ($_SESSION['auth'] != 'yes_auth' && $_COOKIE["rememberme"]){
         $str = $_COOKIE["rememberme"];
         
-        // Âñÿ äëèíà ñòðîêè
+        // Ð’ÑÑ Ð´Ð»Ð¸Ð½Ð° ÑÑ‚Ñ€Ð¾ÐºÐ¸
         $all_len = strlen($str);
-        // Äëèíà ëîãèíà
+        // Ð”Ð»Ð¸Ð½Ð° Ð»Ð¾Ð³Ð¸Ð½Ð°
         $login_len = strpos($str,'+'); 
-        // Îáðåçàåì ñòðîêó äî Ïëþñà è ïîëó÷àåì Ëîãèí
+        // ÐžÐ±Ñ€ÐµÐ·Ð°ÐµÐ¼ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð´Ð¾ ÐŸÐ»ÑŽÑÐ° Ð¸ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ð›Ð¾Ð³Ð¸Ð½
         $login = clear_string(substr($str,0,$login_len));
       
-        // Ïîëó÷àåì ïàðîëü 
+        // ÐŸÐ¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ 
         $pass = clear_string(substr($str,$login_len+1,$all_len));
         
         $result = mysql_query("SELECT * FROM reg_user WHERE (login = '$login' or email = '$login') AND pass = '$pass'",$link);

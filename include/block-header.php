@@ -1,76 +1,76 @@
-<!-- Основной верхний блок -->
+п»ї<!-- РћСЃРЅРѕРІРЅРѕР№ РІРµСЂС…РЅРёР№ Р±Р»РѕРє -->
 <div id="block-header">
-    <!-- Верхний блок с навигацией -->
+    <!-- Р’РµСЂС…РЅРёР№ Р±Р»РѕРє СЃ РЅР°РІРёРіР°С†РёРµР№ -->
     <div id="header-top-block">
-        <!-- Список с навигацией -->
+        <!-- РЎРїРёСЃРѕРє СЃ РЅР°РІРёРіР°С†РёРµР№ -->
         <ul id="header-top-menu">
-            <li>Ваш город - <span>Киев</span></li>
-            <li><a href="o-nas.php">О нас</a></li>
-            <li><a href="magaziny.php">Магазины</a></li>
-            <li><a href="contacts.php">Контакты</a></li>
+            <li>Р’Р°С€ РіРѕСЂРѕРґ - <span>РљРёРµРІ</span></li>
+            <li><a href="o-nas.php">Рћ РЅР°СЃ</a></li>
+            <li><a href="magaziny.php">РњР°РіР°Р·РёРЅС‹</a></li>
+            <li><a href="contacts.php">РљРѕРЅС‚Р°РєС‚С‹</a></li>
         </ul>
-        <!-- Вход и регистрация -->
+        <!-- Р’С…РѕРґ Рё СЂРµРіРёСЃС‚СЂР°С†РёСЏ -->
         <?php
             if ($_SESSION['auth'] == 'yes_auth'){
-                echo '<p id="auth-user-info" align="right"><img src="/images/user.png" />Здраствуйте, '.$_SESSION['auth_name'].'!</p>';                
+                echo '<p id="auth-user-info" align="right"><img src="/images/user.png" />Р—РґСЂР°СЃС‚РІСѓР№С‚Рµ, '.$_SESSION['auth_name'].'!</p>';                
             } else {
-                echo '<p id="req-auth-title" align="right"><a class="top-auth">Вход</a><a href="registration.php">Регистрация</a></p>';                
+                echo '<p id="req-auth-title" align="right"><a class="top-auth">Р’С…РѕРґ</a><a href="registration.php">Р РµРіРёСЃС‚СЂР°С†РёСЏ</a></p>';                
             }	
         ?>
         <div id="block-top-auth">
             <div class="corner"></div>
             <form method="post">
                 <ul id="input-email-pass">
-                    <h3>Вход</h3>
-                    <p id="message-auth">Неверный Логин и(или) Пароль</p>
-                    <li><center><input type="text" id="auth_login" placeholder="Логин или E-mail"/></center></li>
-                    <li><center><input type="password" id="auth_pass" placeholder="Пароль"/><span id="button-pass-show-hide" class="pass-show"></span></center></li>
+                    <h3>Р’С…РѕРґ</h3>
+                    <p id="message-auth">РќРµРІРµСЂРЅС‹Р№ Р›РѕРіРёРЅ Рё(РёР»Рё) РџР°СЂРѕР»СЊ</p>
+                    <li><center><input type="text" id="auth_login" placeholder="Р›РѕРіРёРЅ РёР»Рё E-mail"/></center></li>
+                    <li><center><input type="password" id="auth_pass" placeholder="РџР°СЂРѕР»СЊ"/><span id="button-pass-show-hide" class="pass-show"></span></center></li>
                     <ul id="list-auth">
-                        <li><input type="checkbox" name="rememberme" id="rememberme"/><label for="rememberme">Запомнить меня</label></li>
-                        <li><a id="remindpass" href="#">Забыли пароль?</a></li>
+                        <li><input type="checkbox" name="rememberme" id="rememberme"/><label for="rememberme">Р—Р°РїРѕРјРЅРёС‚СЊ РјРµРЅСЏ</label></li>
+                        <li><a id="remindpass" href="#">Р—Р°Р±С‹Р»Рё РїР°СЂРѕР»СЊ?</a></li>
                     </ul>
-                    <p align="right" id="button-auth"><a>Вход</a></p>
+                    <p align="right" id="button-auth"><a>Р’С…РѕРґ</a></p>
                     <p align="right" class="auth-loading"><img src="/images/loading.gif"/></p>
                 </ul>
             </form>
             <div id="block-remind">
-                <h3>Восстановление<br /> пароля</h3>
+                <h3>Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ<br /> РїР°СЂРѕР»СЏ</h3>
                 <p id="message-remind" class="message-remind-success" ></p>
-                <center><input type="text" id="remind-email" placeholder="Ваш E-mail" /></center>
-                <p align="right" id="button-remind" ><a>Готово</a></p>
+                <center><input type="text" id="remind-email" placeholder="Р’Р°С€ E-mail" /></center>
+                <p align="right" id="button-remind" ><a>Р“РѕС‚РѕРІРѕ</a></p>
                 <p align="right" class="auth-loading" ><img src="/images/loading.gif" /></p>
-                <p id="prev-auth">Назад</p>
+                <p id="prev-auth">РќР°Р·Р°Рґ</p>
             </div>
         </div>
     </div>
-    <!-- Линия -->
+    <!-- Р›РёРЅРёСЏ -->
     <div id="top-line"></div>
     
     <div id="block-user" >
         <div class="corner2"></div>
         <ul>
-            <li><img src="/images/user_info.png" /><a href="profile.php">Профиль</a></li>
-            <li><img src="/images/logout.png" /><a id="logout" >Выход</a></li>
+            <li><img src="/images/user_info.png" /><a href="profile.php">РџСЂРѕС„РёР»СЊ</a></li>
+            <li><img src="/images/logout.png" /><a id="logout" >Р’С‹С…РѕРґ</a></li>
         </ul>
     </div>
-    <!-- Логотип -->
+    <!-- Р›РѕРіРѕС‚РёРї -->
     <img id="img-logo" src="/images/logo.png"/>
-    <!-- Информационный блок -->
+    <!-- РРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹Р№ Р±Р»РѕРє -->
     <div id="personal-info">
-        <p align="right">Майба Мирослав</p>
+        <p align="right">РњР°Р№Р±Р° РњРёСЂРѕСЃР»Р°РІ</p>
         <h3 align="right">+38 067 59-31-650</h3>
         <img src="/images/phone-icon.png" />
-        <p align="right">Режим работы:</p>
-        <p align="right">Будние дни: <b>круглосуточно</b></p>
-        <p align="right">Суббота, Воскресенье - выходные</p>
+        <p align="right">Р РµР¶РёРј СЂР°Р±РѕС‚С‹:</p>
+        <p align="right">Р‘СѓРґРЅРёРµ РґРЅРё: <b>РєСЂСѓРіР»РѕСЃСѓС‚РѕС‡РЅРѕ</b></p>
+        <p align="right">РЎСѓР±Р±РѕС‚Р°, Р’РѕСЃРєСЂРµСЃРµРЅСЊРµ - РІС‹С…РѕРґРЅС‹Рµ</p>
         <img src="/images/time-icon.png" />
     </div>
-    <!-- Форма поиска -->
+    <!-- Р¤РѕСЂРјР° РїРѕРёСЃРєР° -->
     <div id="block-search">
         <form method="GET" action="search.php?q=">
             <span></span>
-            <input type="text" id="input-search" name="q" placeholder="Поиск среди товаров" value="<?php echo $search;?>" />
-            <input type="submit" id="button-search" value="Поиск" />
+            <input type="text" id="input-search" name="q" placeholder="РџРѕРёСЃРє СЃСЂРµРґРё С‚РѕРІР°СЂРѕРІ" value="<?php echo $search;?>" />
+            <input type="submit" id="button-search" value="РџРѕРёСЃРє" />
         </form>
         <ul id="result-search">
         </ul>
@@ -79,11 +79,11 @@
 
 <div id="top-menu">
     <ul>
-        <li><img src="/images/shop.png"/><a href="index.php">Главная</a></li>
-        <li><img src="/images/new-32.png"/><a href="view_aystopper.php?go=news">Новинки</a></li>
-        <li><img src="/images/bestprice-32.png"/><a href="view_aystopper.php?go=leaders">Лидеры продаж</a></li>
-        <li><img src="/images/sale-32.png"/><a href="view_aystopper.php?go=sale">Разпродажа</a></li>
+        <li><img src="/images/shop.png"/><a href="index.php">Р“Р»Р°РІРЅР°СЏ</a></li>
+        <li><img src="/images/new-32.png"/><a href="view_aystopper.php?go=news">РќРѕРІРёРЅРєРё</a></li>
+        <li><img src="/images/bestprice-32.png"/><a href="view_aystopper.php?go=leaders">Р›РёРґРµСЂС‹ РїСЂРѕРґР°Р¶</a></li>
+        <li><img src="/images/sale-32.png"/><a href="view_aystopper.php?go=sale">Р Р°Р·РїСЂРѕРґР°Р¶Р°</a></li>
     </ul>
-    <p align="right" id="block-basket"><img src="/images/cart-icon.png"/><a href="cart.php?action=oneclick">Корзина пуста</a></p>
+    <p align="right" id="block-basket"><img src="/images/cart-icon.png"/><a href="cart.php?action=oneclick">РљРѕСЂР·РёРЅР° РїСѓСЃС‚Р°</a></p>
     <div id="nav-line"></div>
 </div>

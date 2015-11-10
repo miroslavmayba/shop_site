@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
             
         include("db_connect.php");
@@ -12,28 +12,28 @@
             
             If (mysql_num_rows($result) > 0){
                 
-                // Ãåíåðàöèÿ ïàðîëÿ.
+                // Ð“ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ñ Ð¿Ð°Ñ€Ð¾Ð»Ñ.
                 $newpass = fungenpass();
                 
-                // Øèôðîâàíèå ïàðîëÿ.
+                // Ð¨Ð¸Ñ„Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¿Ð°Ñ€Ð¾Ð»Ñ.
                 $pass   = md5($newpass);
                 $pass   = strrev($pass);
                 $pass   = strtolower("9nm2rv8q".$pass."2yo6z");
                 
-                // Îáíîâëåíèå ïàðîëÿ íà íîâûé.
+                // ÐžÐ±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð°Ñ€Ð¾Ð»Ñ Ð½Ð° Ð½Ð¾Ð²Ñ‹Ð¹.
                 $update = mysql_query ("UPDATE reg_user SET pass='$pass' WHERE email='$email'",$link);
                 
-                // Îòïðàâêà íîâîãî ïàðîëÿ.
+                // ÐžÑ‚Ð¿Ñ€Ð°Ð²ÐºÐ° Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ð¿Ð°Ñ€Ð¾Ð»Ñ.
                 send_mail( 'email@email.com',
                     $email,
-					'Íîâûé ïàðîëü äëÿ ñàéòà',
-					'Âàø ïàðîëü: '.$newpass); 
+					'ÐÐ¾Ð²Ñ‹Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ Ð´Ð»Ñ ÑÐ°Ð¹Ñ‚Ð°',
+					'Ð’Ð°Ñˆ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ: '.$newpass); 
                 echo 'yes';
             } else {
-                echo 'Äàííûé E-mail íå íàéäåí!';
+                echo 'Ð”Ð°Ð½Ð½Ñ‹Ð¹ E-mail Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½!';
             }
         } else {
-            echo 'Óêàæèòå ñâîé E-mail';
+            echo 'Ð£ÐºÐ°Ð¶Ð¸Ñ‚Ðµ ÑÐ²Ð¾Ð¹ E-mail';
         }
     }
 ?>

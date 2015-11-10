@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 $db_host        = 'localhost';
 $db_user        = 'admin';
 $db_pass        = '123456';
@@ -6,6 +6,6 @@ $db_database    = 'db_shop';
 
 $link = mysql_connect($db_host, $db_user, $db_pass);
 
-mysql_select_db($db_database, $link) or die("Íåò ñîåäèíåíèÿ ñ ÁÄ ".mysql_error());
+mysql_select_db($db_database, $link) or die("ÐÐµÑ‚ ÑÐ¾ÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ñ Ñ Ð‘Ð” ".mysql_error());
 mysql_query("SET names cp1251");
 ?>

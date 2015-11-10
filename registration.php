@@ -1,4 +1,4 @@
-<?php
+п»ї<?php
     include("include/db_connect.php");
     include("functions/functions.php");
     session_start();
@@ -26,7 +26,7 @@
         $(document).ready(function(){	
             $('#form_reg').validate({	
 					
-                    // правила для проверки
+                    // РїСЂР°РІРёР»Р° РґР»СЏ РїСЂРѕРІРµСЂРєРё
 					rules:{
 						"reg_login":{
 							required:true,
@@ -76,47 +76,47 @@
                         }
 					},
 
-					// выводимые сообщения при нарушении соответствующих правил
+					// РІС‹РІРѕРґРёРјС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ РїСЂРё РЅР°СЂСѓС€РµРЅРёРё СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёС… РїСЂР°РІРёР»
 					messages:{
 						"reg_login":{
-							required:"Укажите Логин!",
-                            minlength:"От 5 до 15 символов!",
-                            maxlength:"От 5 до 15 символов!",
-                            remote: "Логин занят!"
+							required:"РЈРєР°Р¶РёС‚Рµ Р›РѕРіРёРЅ!",
+                            minlength:"РћС‚ 5 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!",
+                            maxlength:"РћС‚ 5 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!",
+                            remote: "Р›РѕРіРёРЅ Р·Р°РЅСЏС‚!"
 						},
 						"reg_pass":{
-							required:"Укажите Пароль!",
-                            minlength:"От 7 до 15 символов!",
-                            maxlength:"От 7 до 15 символов!"
+							required:"РЈРєР°Р¶РёС‚Рµ РџР°СЂРѕР»СЊ!",
+                            minlength:"РћС‚ 7 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!",
+                            maxlength:"РћС‚ 7 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!"
 						},
 						"reg_surname":{
-							required:"Укажите вашу Фамилию!",
-                            minlength:"От 3 до 20 символов!",
-                            maxlength:"От 3 до 20 символов!"                            
+							required:"РЈРєР°Р¶РёС‚Рµ РІР°С€Сѓ Р¤Р°РјРёР»РёСЋ!",
+                            minlength:"РћС‚ 3 РґРѕ 20 СЃРёРјРІРѕР»РѕРІ!",
+                            maxlength:"РћС‚ 3 РґРѕ 20 СЃРёРјРІРѕР»РѕРІ!"                            
 						},
 						"reg_name":{
-							required:"Укажите ваше Имя!",
-                            minlength:"От 3 до 15 символов!",
-                            maxlength:"От 3 до 15 символов!"                               
+							required:"РЈРєР°Р¶РёС‚Рµ РІР°С€Рµ РРјСЏ!",
+                            minlength:"РћС‚ 3 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!",
+                            maxlength:"РћС‚ 3 РґРѕ 15 СЃРёРјРІРѕР»РѕРІ!"                               
 						},
 						"reg_patronymic":{
-							required:"Укажите ваше Отчество!",
-                            minlength:"От 3 до 25 символов!",
-                            maxlength:"От 3 до 25 символов!"  
+							required:"РЈРєР°Р¶РёС‚Рµ РІР°С€Рµ РћС‚С‡РµСЃС‚РІРѕ!",
+                            minlength:"РћС‚ 3 РґРѕ 25 СЃРёРјРІРѕР»РѕРІ!",
+                            maxlength:"РћС‚ 3 РґРѕ 25 СЃРёРјРІРѕР»РѕРІ!"  
 						},
 						"reg_email":{
-						    required:"Укажите свой E-mail",
-							email:"Не корректный E-mail"
+						    required:"РЈРєР°Р¶РёС‚Рµ СЃРІРѕР№ E-mail",
+							email:"РќРµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ E-mail"
 						},
 						"reg_phone":{
-							required:"Укажите номер телефона!"
+							required:"РЈРєР°Р¶РёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°!"
 						},
 						"reg_address":{
-							required:"Необходимо указать адрес доставки!"
+							required:"РќРµРѕР±С…РѕРґРёРјРѕ СѓРєР°Р·Р°С‚СЊ Р°РґСЂРµСЃ РґРѕСЃС‚Р°РІРєРё!"
 						},
 						"reg_captcha":{
-							required:"Введите код с картинки!",
-                            remote: "Не верный код проверки!"
+							required:"Р’РІРµРґРёС‚Рµ РєРѕРґ СЃ РєР°СЂС‚РёРЅРєРё!",
+                            remote: "РќРµ РІРµСЂРЅС‹Р№ РєРѕРґ РїСЂРѕРІРµСЂРєРё!"
 						}
 					},
 					
@@ -127,7 +127,7 @@
                             if (data == 'true'){
                                 $("#block-form-registration").fadeOut(300,function() {
                             
-                                    $("#reg_message").addClass("reg_message_good").fadeIn(400).html("Вы успешно зарегистрированы!");
+                                    $("#reg_message").addClass("reg_message_good").fadeIn(400).html("Р’С‹ СѓСЃРїРµС€РЅРѕ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅС‹!");
                                     $("#form_submit").hide();
                             
                                 });
@@ -143,7 +143,7 @@
      
         </script>
     
-	<title>Регистрация</title>
+	<title>Р РµРіРёСЃС‚СЂР°С†РёСЏ</title>
 </head>
 
 <body>
@@ -162,34 +162,34 @@
         </div>
         
         <div id="block-content">
-            <h2 class="h2-title">Регистрация</h2>
+            <h2 class="h2-title">Р РµРіРёСЃС‚СЂР°С†РёСЏ</h2>
             <form method="post" id="form_reg" action="/reg/handler_reg.php">
                 <p id="reg_message"></p>
                 <div id="block-form-registration">
                     <ul id="form-registration">
                         <li>
-                            <label>Логин</label>
+                            <label>Р›РѕРіРёРЅ</label>
                             <span class="star">*</span>
                             <input type="text" name="reg_login" id="reg_login" />
                         </li>
                         <li>
-                            <label>Пароль</label>
+                            <label>РџР°СЂРѕР»СЊ</label>
                             <span class="star">*</span>
                             <input type="text" name="reg_pass" id="reg_pass" />
-                            <span id="genpass">Сгенерировать</span>
+                            <span id="genpass">РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ</span>
                         </li>
                         <li>
-                            <label>Фамилия</label>
+                            <label>Р¤Р°РјРёР»РёСЏ</label>
                             <span class="star">*</span>
                             <input type="text" name="reg_surname" id="reg_surname" />
                         </li>
                         <li>
-                            <label>Имя</label>
+                            <label>РРјСЏ</label>
                             <span class="star">*</span>
                             <input type="text" name="reg_name" id="reg_name" />
                         </li>
                         <li>
-                            <label>Отчество</label>
+                            <label>РћС‚С‡РµСЃС‚РІРѕ</label>
                             <span class="star">*</span>
                             <input type="text" name="reg_patronymic" id="reg_patronomic" />
                         </li>
@@ -199,12 +199,12 @@
                             <input type="text" name="reg_email" id="reg_email" />
                         </li>
                         <li>
-                            <label>Мобильный телефон</label>
+                            <label>РњРѕР±РёР»СЊРЅС‹Р№ С‚РµР»РµС„РѕРЅ</label>
                             <span class="star">*</span>
                             <input type="text" name="reg_phone" id="reg_phone" />
                         </li>
                         <li>
-                            <label>Адрес доставки</label>
+                            <label>РђРґСЂРµСЃ РґРѕСЃС‚Р°РІРєРё</label>
                             <span class="star">*</span>
                             <input type="text" name="reg_address" id="reg_address" />
                         </li>
@@ -212,12 +212,12 @@
                             <div id="block-captcha">
                                 <img src="/reg/reg_captcha.php" />
                                 <input type="text" name="reg_captcha" id="reg_captcha" />
-                                <p id="reloadcaptcha">Обновить</p>
+                                <p id="reloadcaptcha">РћР±РЅРѕРІРёС‚СЊ</p>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <p align="right"><input type="submit" name="reg_submit" id="form_submit" value="Регистрация" /></p>
+                <p align="right"><input type="submit" name="reg_submit" id="form_submit" value="Р РµРіРёСЃС‚СЂР°С†РёСЏ" /></p>
             </form>        
 
         </div>

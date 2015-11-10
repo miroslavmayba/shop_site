@@ -1,4 +1,4 @@
-<?php
+п»ї<?php
     include("include/db_connect.php");
     include("functions/functions.php");
     session_start();
@@ -11,32 +11,32 @@
     switch ($sorting){
         case 'price-asc';
         $sorting = 'price ASC';
-        $sort_name = 'От дешевых к дорогим';
+        $sort_name = 'РћС‚ РґРµС€РµРІС‹С… Рє РґРѕСЂРѕРіРёРј';
         break;
         
         case 'price-desc';
         $sorting = 'price DESC';
-        $sort_name = 'От дорогих к дешевым';
+        $sort_name = 'РћС‚ РґРѕСЂРѕРіРёС… Рє РґРµС€РµРІС‹Рј';
         break;
                 
         case 'popular';
         $sorting = 'count DESC';
-        $sort_name = 'Популярные';
+        $sort_name = 'РџРѕРїСѓР»СЏСЂРЅС‹Рµ';
         break;
         
         case 'news';
         $sorting = 'datetime DESC';
-        $sort_name = 'Новинки';
+        $sort_name = 'РќРѕРІРёРЅРєРё';
         break;
         
         case 'brand';
         $sorting = 'brand';
-        $sort_name = 'По алфавиту';
+        $sort_name = 'РџРѕ Р°Р»С„Р°РІРёС‚Сѓ';
         break;
         
         default:
         $sorting = 'products_id DESC';
-        $sort_name = 'Нет сортировки';
+        $sort_name = 'РќРµС‚ СЃРѕСЂС‚РёСЂРѕРІРєРё';
         break;
     }
 ?>
@@ -56,7 +56,7 @@
     <script type="text/javascript" src="/trackbar/jquery.trackbar.js"></script>
     <script type="text/javascript" src="/js/TextChange.js"></script>
     
-	<title>Поиск - <?php echo $search; ?></title>
+	<title>РџРѕРёСЃРє - <?php echo $search; ?></title>
 </head>
 
 <body>
@@ -107,19 +107,19 @@
                     
                     echo '
                     <div id="block-sorting">
-                        <p id="nav-breadcrumbs"><a href="index.php">Главная страница</a> \ <span>Поиск</span></p>
+                        <p id="nav-breadcrumbs"><a href="index.php">Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°</a> \ <span>РџРѕРёСЃРє</span></p>
                             <ul id="option-list">
-                                <li>Вид:</li>
+                                <li>Р’РёРґ:</li>
                                 <li><img id="style-grid" src="/images/icon-grid.png"/></li>
                                 <li><img id="style-list" src="/images/icon-list.png"/></li>
-                                <li>Сортировать:</li>
+                                <li>РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ:</li>
                                 <li><a id="select-sort">'.$sort_name.'</a>
                                     <ul id="sorting-list">
-                                        <li><a href="index.php?sort=price-asc">От дешевых к дорогим</a></li>
-                                        <li><a href="index.php?sort=price-desc">От дорогих к дешевым</a></li>
-                                        <li><a href="index.php?sort=popular">Популярные</a></li>
-                                        <li><a href="index.php?sort=news">Новинки</a></li>
-                                        <li><a href="index.php?sort=brand">По алфавиту</a></li>
+                                        <li><a href="index.php?sort=price-asc">РћС‚ РґРµС€РµРІС‹С… Рє РґРѕСЂРѕРіРёРј</a></li>
+                                        <li><a href="index.php?sort=price-desc">РћС‚ РґРѕСЂРѕРіРёС… Рє РґРµС€РµРІС‹Рј</a></li>
+                                        <li><a href="index.php?sort=popular">РџРѕРїСѓР»СЏСЂРЅС‹Рµ</a></li>
+                                        <li><a href="index.php?sort=news">РќРѕРІРёРЅРєРё</a></li>
+                                        <li><a href="index.php?sort=brand">РџРѕ Р°Р»С„Р°РІРёС‚Сѓ</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -159,7 +159,7 @@
                                         <li><img src="/images/comment-icon.png" /><p>0</p></li>
                                     </ul>
                                     <a class="add-cart-style-grid"><a/>
-                                    <p class="style-price-grid"><strong>'.$row["price"].'</strong> грн. </p>
+                                    <p class="style-price-grid"><strong>'.$row["price"].'</strong> РіСЂРЅ. </p>
                                     <div class="mini-features" >
                                         '.$row["mini_features"].'
                                     </div>
@@ -208,7 +208,7 @@
                                     
                                     <p class="style-title-list"><a href="">'.$row["title"].'</a></p>
                                     <a class="add-cart-style-list"><a/>
-                                    <p class="style-price-list"><strong>'.$row["price"].'</strong> грн. </p>
+                                    <p class="style-price-list"><strong>'.$row["price"].'</strong> РіСЂРЅ. </p>
                                     <div class="style-text-list" >
                                         '.$row["mini_description"].'
                                     </div>
@@ -253,11 +253,11 @@
                         ';
                     }
                 } else {
-                    echo "<p>Ничего не найдено</p>";
+                    echo "<p>РќРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ</p>";
                 }
         
         } else {
-            echo "<p>Поисковое значение должно быть от 2 до 64 символов!</p>";
+            echo "<p>РџРѕРёСЃРєРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РѕС‚ 2 РґРѕ 64 СЃРёРјРІРѕР»РѕРІ!</p>";
         }            
             ?>
         </div>

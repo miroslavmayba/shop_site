@@ -1,4 +1,4 @@
-<div id="block-news">
+﻿<div id="block-news">
     <center><img id="news-prev" src="/images/img-prev.png"/></center>
     <div id="newsticker">
         <ul>
